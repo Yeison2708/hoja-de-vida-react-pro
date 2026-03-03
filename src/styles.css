@@ -1,0 +1,168 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+section {
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+
+h3 {
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(10px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.download-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #1f1c2c;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #ddd;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  section {
+    background: none !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  .download-btn {
+    display: none;
+  }
+
+  .skill-card {
+    background: none !important;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========================= */
+/* ESTILO SOLO PARA DESCARGAR */
+/* ========================= */
+
+@media print {
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: white !important;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .container {
+    width: 210mm;
+    min-height: 297mm;
+    background: white !important;
+    color: black !important;
+    padding: 30mm 20mm;
+    box-shadow: none !important;
+  }
+
+  section {
+    margin-top: 25px;
+    background: none !important;
+    backdrop-filter: none !important;
+  }
+
+  h3 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skill-card {
+    background: none !important;
+  }
+
+  .profile-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .download-btn {
+    display: none;
+  }
+}
+
